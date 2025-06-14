@@ -87,10 +87,10 @@ for repo in user.get_repos():
                 rel_path = os.path.relpath(file_path, local_repo_path)
 
                 # Optimizer for development stage; add triple double-quotes later
-
+                """
                 if os.path.getsize(file_path) > 500_000:  # 500 KB
                     continue
-
+                """
 
                 try:
                     with open(file_path, "r", encoding="utf-8", errors="ignore") as f:

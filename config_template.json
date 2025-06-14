@@ -1,5 +1,7 @@
 {
   "ACCESS_TOKEN": "your_access_token_here",
   "USERNAME": "your_username_here",
-  "LOCAL_REPO_PATH": "your_local_repo_path_here"
+  "LOCAL_REPO_PATH": "your_local_repo_path_here",
+  "MODEL_NAME": "your_model_name_here",
+  "NUMBER_OF_MATCHES": "number_of_matches_in_output_here"
 }

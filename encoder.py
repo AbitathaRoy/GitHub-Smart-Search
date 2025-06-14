@@ -5,7 +5,12 @@ from transformers import AutoTokenizer
 from utils import char_to_token_ratio
 
 # --- Configuration ---
-MODEL_NAME = "sentence-transformers/all-MiniLM-L6-v2"
+
+# Fetch Model Name from Config
+with open("config_private.json", "r") as f:
+    config = json.load(f)
+    MODEL_NAME = config["MODEL_NAME"]
+
 tokenizer = AutoTokenizer.from_pretrained(MODEL_NAME)   # Does not work with non-Hugging Face or Transformer based tools
 TOKEN_LIMIT = tokenizer.model_max_length or 512  # Fallback in case it's not set
 CHAR_TO_TOKEN_RATIO = char_to_token_ratio(MODEL_NAME)
@@ -37,7 +42,7 @@ for i in range(len(INPUT_FILE)):
 
     print(f"🔍 Embedding {len(input_data[i])} items using {MODEL_NAME}...")
 
-    for data in tqdm(input_data[i], desc="Embedding Repos"):
+    for data in tqdm(input_data[i], desc="Embedding Data"):
         working_text = prepare_text_for_embedding(data)
         chunks = list(chunk_string(working_text, CHAR_LIMIT))
         data["embedding"] = [model.encode(chunk).tolist() for chunk in chunks]
