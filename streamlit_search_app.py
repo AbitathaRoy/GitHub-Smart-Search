@@ -1,4 +1,4 @@
-# streamlit_search_app.py
+# Old version; not used in final project
 import streamlit as st
 
 # MUST BE FIRST Streamlit command (why? :) just a convention I guess)

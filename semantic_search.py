@@ -1,3 +1,6 @@
+# --- Note ---
+# Old; not used in final product.
+
 import json
 import numpy as np
 from sentence_transformers import SentenceTransformer

@@ -1,7 +1,6 @@
-"""
-For practice; not used.
-Encoder with chunking implemented manually.
-"""
+# --- Note ---
+# For practice; not used.
+# Encoder with chunking implemented manually.
 
 import json
 from sentence_transformers import SentenceTransformer
