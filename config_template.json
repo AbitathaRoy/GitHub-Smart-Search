@@ -3,5 +3,8 @@
   "USERNAME": "your_username_here",
   "LOCAL_REPO_PATH": "your_local_repo_path_here",
   "MODEL_NAME": "your_model_name_here",
-  "NUMBER_OF_MATCHES": "number_of_matches_in_output_here"
+  "NUMBER_OF_MATCHES": "number_of_matches_in_output_here",
+  "QUERY_MODEL_NAME": "your_model_to_process_queries_here",
+  "QUERY_FEW_SHOTS_PATH": "your_query_few_shots_path_here",
+  "HF_API_KEY": "hf_..."
 }

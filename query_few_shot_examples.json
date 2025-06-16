@@ -1,0 +1,62 @@
+[
+  {
+    "q": "Have I built something related to natural language processing?",
+    "a": "natural language processing"
+  },
+  {
+    "q": "Did I ever work on machine learning for biology?",
+    "a": "machine learning biology"
+  },
+  {
+    "q": "Any repo involving reinforcement learning agents?",
+    "a": "reinforcement learning agents"
+  },
+  {
+    "q": "What projects do I have on computer vision?",
+    "a": "computer vision"
+  },
+  {
+    "q": "Did I make anything for time series forecasting?",
+    "a": "time series forecasting"
+  },
+  {
+    "q": "Is there something which I can reuse for parsing Excel files?",
+    "a": "parsing Excel files"
+  },
+  {
+    "q": "Which of my repos help in automating tasks on the web?",
+    "a": "web automation"
+  },
+  {
+    "q": "Have I made a Streamlit app for semantic search?",
+    "a": "Streamlit semantic search"
+  },
+  {
+    "q": "Did I build something to read PDFs and extract tables?",
+    "a": "PDF table extraction"
+  },
+  {
+    "q": "What repositories use SQLite or work with local databases?",
+    "a": "SQLite local databases"
+  },
+  {
+    "q": "Is there any Jupyter notebook that analyzes air pollution?",
+    "a": "air pollution Jupyter notebook"
+  },
+  {
+    "q": "Have I written code for GitHub repo indexing?",
+    "a": "GitHub repo indexing"
+  },
+  {
+    "q": "What projects have I done using the Hugging Face Transformers library?",
+    "a": "Hugging Face Transformers"
+  },
+  {
+    "q": "Have I implemented any tool to visualize data in real-time?",
+    "a": "real-time data visualization"
+  },
+  {
+    "q": "Can I reuse anything for building a question-answering system?",
+    "a": "question answering system"
+  }
+]

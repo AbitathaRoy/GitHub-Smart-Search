@@ -1,6 +1,7 @@
 # streamlit_search_app_2.py
 import streamlit as st
 import time
+from preprocess_query_2 import condense_query_with_model
 
 # MUST BE FIRST Streamlit command (why? :) just a convention I guess)
 st.set_page_config(page_title="GitHub AI Search", layout="centered")
@@ -97,6 +98,10 @@ model = load_model()
 st.title("🧠 GitHub Smart Search")
 
 query = st.text_input("Ask your question:")
+
+# Pre-process the query
+QUERY_MODEL_NAME = config["QUERY_MODEL_NAME"]
+query = condense_query_with_model(query)
 
 # Buttons for search modes
 col1, col2 = st.columns(2)
