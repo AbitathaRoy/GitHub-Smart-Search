@@ -47,7 +47,7 @@ After completing your configuration file with your data and keys, run the `extra
 python3 extract_github_repo_data.py
 ```
 Run the file `encoder_without_caching.py` to embed your data and create their subsequent output files.
-**Note:** As of this version of this application, to keep things cool and swift, DO NOT embed your `files_data`. For that, in `encoder_without_caching.py', ensure that the lists `INPUT_FILE` and `OUTPUT_FILE` contain the filenames `repo_data.json` and `repo_data_with_embeddings.json` ONLY.
+**Note:** As of this version of this application, to keep things cool and swift, DO NOT embed your `files_data`. For that, in `encoder_without_caching.py`, ensure that the lists `INPUT_FILE` and `OUTPUT_FILE` contain the filenames `repo_data.json` and `repo_data_with_embeddings.json` ONLY.
 ```bash
 python3 encoder_without_caching.py
 ```
