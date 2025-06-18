@@ -14,7 +14,10 @@ def config_loader():
             "QUERY_MODEL_NAME": st.secrets["QUERY_MODEL_NAME"],
             "QUERY_FEW_SHOTS_PATH": st.secrets["QUERY_FEW_SHOTS_PATH"],
             "HF_API_KEY": st.secrets["HF_API_KEY"],
-            "GEMINI_API_KEY": st.secrets["GEMINI_API_KEY"]
+            "GEMINI_API_KEY": st.secrets["GEMINI_API_KEY"],
+            "RELEASE_TAG": st.secrets["RELEASE_TAG"],
+            "REPO_OWNER": st.secrets["REPO_OWNER"],
+            "REPO_NAME": st.secrets["REPO_NAME"]
         }
     except Exception:
         with open("config_private.json", "r", encoding="utf-8") as f:
