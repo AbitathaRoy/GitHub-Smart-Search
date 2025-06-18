@@ -14,7 +14,7 @@ Check out the [Release Notes](https://github.com/AbitathaRoy/AI-GitHub-Indexer/r
 
 ### ⚠️ What doesn't work (yet)?
 - **Deep Search (In Progress) –** Intended to go beyond READMEs and analyze **file-level embeddings**. Currently under development and optimization.
-- **Global/Hosted App –** A publicly-available hosted version (configured to my account 😁) is not yet stable and is undergoing debugging.
+- **Global/Hosted App –** A publicly-available hosted version (configured to my account 😁 and yours) is not yet stable and is undergoing debugging.
 
 ## Getting Started
 ### 1. Clone the Repository
