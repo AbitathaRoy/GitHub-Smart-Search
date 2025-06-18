@@ -1,6 +1,9 @@
 # Old version; not used in final project
 import streamlit as st
 
+from config_loader import config_loader
+config = config_loader()
+
 # MUST BE FIRST Streamlit command (why? :) just a convention I guess)
 st.set_page_config(page_title="GitHub AI Search", layout="centered")
 
@@ -10,9 +13,6 @@ from sentence_transformers import SentenceTransformer
 from sklearn.metrics.pairwise import cosine_similarity
 
 # --- Configuration ---
-CONFIG_PATH = "config_private.json"
-with open(CONFIG_PATH, "r") as f:
-    config = json.load(f)
 MODEL_NAME = config["MODEL_NAME"]
 NUMBER_OF_MATCHES = config.get("NUMBER_OF_MATCHES", 3)
 

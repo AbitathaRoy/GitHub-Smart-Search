@@ -1,17 +1,18 @@
+# Used in final project
+
 from github import Github
 import json
 import os
 from utils import detect_language_from_extension
+
+from config_loader import config_loader
+config = config_loader()
 
 """
 This program indexes the repo names, their metadata and the files contained
 in them for a user.
 """
 
-# 🔑 Replace with your token
-ACCESS_TOKEN = "your_personal_access_token"
-USERNAME = "your_user_name"
-LOCAL_REPO_PATH = "your_local_repo_path"
 FILE_EXTENSION = (
     # Programming languages
     ".py", ".java", ".cpp", ".c", ".js", ".ts", ".rb", ".php", ".go",
@@ -45,9 +46,6 @@ FILE_EXTENSION = (
 )
 
 # To load the token and username from a private json
-with open("config_private.json", "r") as f:
-    config = json.load(f)
-
 ACCESS_TOKEN = config["ACCESS_TOKEN"]
 USERNAME = config["USERNAME"]
 LOCAL_REPO_PATH = config["LOCAL_REPO_PATH"]

@@ -3,10 +3,10 @@ import requests
 import json
 import os
 
-# Load API key and config
-with open("config_private.json", "r", encoding="utf-8") as f:
-    config = json.load(f)
+from config_loader import config_loader
+config = config_loader()
 
+# Load API key and config
 HF_API_KEY = config["HF_API_KEY"]
 QUERY_MODEL_NAME = config["QUERY_MODEL_NAME"]
 EXAMPLES_PATH = config["QUERY_FEW_SHOTS_PATH"]

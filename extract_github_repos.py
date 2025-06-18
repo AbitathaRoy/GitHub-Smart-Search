@@ -1,18 +1,16 @@
+# Old version; not used in final project
+
 from github import Github
 import json
+
+from config_loader import config_loader
+config = config_loader()
 
 """
 This program only indexes the repo names and their metadata for a user.
 """
 
-# 🔑 Replace with your token
-ACCESS_TOKEN = "your_personal_access_token"
-USERNAME = "your_user_name"
-
 # To load the token and username from a private json
-with open("config_private.json", "r") as f:
-    config = json.load(f)
-
 ACCESS_TOKEN = config["ACCESS_TOKEN"]
 USERNAME = config["USERNAME"]
 

@@ -7,14 +7,15 @@ from sklearn.metrics.pairwise import cosine_similarity
 import numpy as np
 import json
 
+from config_loader import config_loader
+config = config_loader()
+
 # Load embeddings
 with open("repo_data_with_embeddings.json", "r", encoding="utf-8") as f:
     repo_data = json.load(f)
 
 # Load model
-with open("config_private.json", "r") as f:
-    config = json.load(f)
-    MODEL_NAME = config["MODEL_NAME"]
+MODEL_NAME = config["MODEL_NAME"]
 
 model = SentenceTransformer(MODEL_NAME)
 
