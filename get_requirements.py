@@ -1,5 +1,6 @@
 # get_requirements.py
 # Walk through the project directory and automatically find and fill the required installations in the .txt
+# For Python versions below 3.10
 
 import os
 import ast
