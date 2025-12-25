@@ -1,0 +1,6 @@
+__pycache__/
+config_private.json
+file_data.json
+file_data_with_embeddings.json
+repo_data.json
+repo_data_with_embeddings.json

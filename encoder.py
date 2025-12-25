@@ -19,8 +19,10 @@ tokenizer = AutoTokenizer.from_pretrained(MODEL_NAME)   # Does not work with non
 TOKEN_LIMIT = tokenizer.model_max_length or 512  # Fallback in case it's not set
 CHAR_TO_TOKEN_RATIO = char_to_token_ratio(MODEL_NAME)
 CHAR_LIMIT = int(TOKEN_LIMIT * CHAR_TO_TOKEN_RATIO)
-INPUT_FILE = ["repo_data.json", "file_data.json"]
-OUTPUT_FILE = ["repo_data_with_embeddings.json", "file_data_with_embeddings.json"]  # storing in new file
+# INPUT_FILE = ["repo_data.json", "file_data.json"]
+INPUT_FILE = ["repo_data.json"]
+# OUTPUT_FILE = ["repo_data_with_embeddings.json", "file_data_with_embeddings.json"]  # storing in new file
+OUTPUT_FILE = ["repo_data_with_embeddings.json"]
 
 # --- Load Embedding Model ---
 model = SentenceTransformer(MODEL_NAME)
