@@ -1,1 +1,11 @@
+<<<<<<< HEAD
 
+=======
+google-genai==1.20.0
+numpy==2.0.2
+requests==2.32.3
+sentence-transformers==4.1.0
+streamlit==1.45.1
+tqdm==4.67.1
+transformers==4.52.4
+>>>>>>> 05c2549dc7baa68fb7d4106dc1ef15c032a123bc

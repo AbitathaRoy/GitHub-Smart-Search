@@ -92,7 +92,8 @@ def display_results(results, mode, elapsed_time):
     st.markdown(f"**{mode} search results.**")
     st.markdown(f"###### Scanned `{len(repo_data_with_embeddings)}` repos in `{elapsed_time:.2f}` seconds. Displaying top `{NUMBER_OF_MATCHES}` results.\n---")
     for score, item in results:
-        st.markdown(f"### 🔗 [{item['repo_name']}]({item.get('repo_url', '#')}) (Score: `{score:.2f}`)")
+        repo_url = item.get("repo_url") or f"https://github.com/{REPO_OWNER}/{REPO_NAME}"
+        st.markdown(f"### 🔗 [{item['repo_name']}]({repo_url}) (Score: `{score:.2f}`)")
         st.markdown(f"**Description:** {item.get('repo_description', 'N/A')}")
         st.markdown("---")
 
@@ -100,7 +101,6 @@ def display_results(results, mode, elapsed_time):
 st.title("🧠 GitHub Smart Search")
 
 query = st.text_input("Ask your question:")
-query = condense_query_with_model(query)
 
 col1, col2 = st.columns(2)
 with col1:
@@ -108,17 +108,19 @@ with col1:
 with col2:
     do_deep = st.button("🧠 Deep Search")
 
-if query:
-    query_embedding = model.encode(query)
-    trigger_default_light = query and not (do_light or do_deep)
-
-    if query and (trigger_default_light or do_light or do_deep):
+if do_light or do_deep:
+    if not query:
+        st.warning("⚠️ Please enter a query before searching.")
+    else:
+        query = condense_query_with_model(query)
+        query_embedding = model.encode(query)
+        mode = "Deep" if do_deep else "Light"
         start_time = time.time()
-        if do_deep:
+
+        if mode == "Deep":
             results = deep_search(query_embedding, file_data_with_embeddings, repo_data_with_embeddings)
-            mode = "Deep"
         else:
             results = light_search(query_embedding, repo_data_with_embeddings)
-            mode = "Light"
+
         elapsed_time = time.time() - start_time
         display_results(results, mode, elapsed_time)
