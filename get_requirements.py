@@ -1,5 +1,10 @@
 # get_requirements.py
+<<<<<<< HEAD
 # Scans the project directory and generates a requirements.txt with necessary third-party packages.
+=======
+# Walk through the project directory and automatically find and fill the required installations in the .txt
+# For Python versions below 3.10
+>>>>>>> 05c2549dc7baa68fb7d4106dc1ef15c032a123bc
 
 import os
 import ast
