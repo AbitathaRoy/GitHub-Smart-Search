@@ -5,3 +5,6 @@ file_data_with_embeddings.json
 repo_data.json
 repo_data_with_embeddings.json
 github_repos.json
+.devcontainer
+.idea
+__pycache__
